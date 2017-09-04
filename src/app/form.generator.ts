@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {JsonService} from './json.service';
 import { FormGroup, FormControl } from '@angular/forms';

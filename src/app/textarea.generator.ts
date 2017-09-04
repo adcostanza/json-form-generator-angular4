@@ -1,5 +1,5 @@
 import { Component, Input} from '@angular/core';
-import { NgForm, FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Textarea } from './textarea';
 
 @Component({
