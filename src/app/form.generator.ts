@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {JsonService} from './json.service';
@@ -13,6 +13,7 @@ import { TextareaGenerator } from './textarea.generator';
   providers: [JsonService]
 })
 export class FormGenerator implements OnInit {
+  @Input() file: string;
   inputs: Textarea[] = [];
   form: FormGroup = new FormGroup({});
   payLoad: any;
@@ -26,7 +27,7 @@ export class FormGenerator implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.jsonService.getInputs()
+		this.jsonService.getInputs(this.file)
 		.subscribe(inputs => {
 			this.inputs = inputs;
 			this.form = this.jsonService.toFormGroup(inputs);

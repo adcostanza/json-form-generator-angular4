@@ -9,8 +9,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class JsonService {
 	constructor(private http: HttpClient) {};
 	json: any;
-	getInputs(): Observable<Textarea[]> {
-		return this.http.get('form-content.json').map(data => {
+	getInputs(file: string): Observable<Textarea[]> {
+		return this.http.get(file).map(data => {
 			let inputs: Textarea[] = [];
 			this.json = data;
 			for(let ind in this.json) {
