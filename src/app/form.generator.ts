@@ -25,7 +25,7 @@ export class FormGenerator implements OnInit {
 			if(temp.length > 1) this.form.value[i] = temp;
 		}
 		
-		this.payLoad = JSON.stringify(this.form.value, null, "\t");
+		this.payLoad = JSON.stringify(this.form.value, null, 2);
 	}
 
 	ngOnInit(): void {

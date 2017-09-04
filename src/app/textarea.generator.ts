@@ -5,6 +5,7 @@ import { Textarea } from './textarea';
 @Component({
   selector: 'textarea-generator',
   templateUrl: 'textarea.generator.html',
+  styleUrls: ['form.generator.css'],
   providers: []
 })
 export class TextareaGenerator {
