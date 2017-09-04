@@ -1,0 +1,12 @@
+textarea {
+	display:inline-block;
+}
+b {
+	font-size:20px;
+}
+textarea {
+	width:400px;
+}
+.add {
+	cursor:pointer;
+}

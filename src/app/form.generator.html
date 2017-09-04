@@ -1,0 +1,16 @@
+  <div class="col-xs-4 col-xs-offset-4 text-center">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+ 
+    <div *ngFor="let input of inputs" class="form-row">
+      <textarea-generator [input]="input" [form]="form"></textarea-generator>
+    </div>
+ 
+    <div class="form-row">
+      <button type="submit">Save</button>
+    </div>
+  </form>
+ 
+  <div *ngIf="payLoad" class="form-row">
+    <strong>Saved the following values</strong><br>{{payLoad}}
+  </div>
+  </div>
