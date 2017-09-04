@@ -22,7 +22,7 @@ export class FormGenerator implements OnInit {
 			this.form.value[i] = this.form.value[i].split("\n");
 		}
 		
-		this.payLoad = JSON.stringify(this.form.value);
+		this.payLoad = JSON.stringify(this.form.value, null, "\t");
 	}
 
 	ngOnInit(): void {
