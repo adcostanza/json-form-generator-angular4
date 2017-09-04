@@ -14,6 +14,9 @@ export class JsonService {
 			let inputs: Textarea[] = [];
 			this.json = data;
 			for(let ind in this.json) {
+				if(typeof(this.json[ind]) != "string") {
+					this.json[ind] = this.json[ind].join("\n");
+				}
 				let _input: Textarea = {name:ind,value:this.json[ind]};
 				inputs.push(_input);
 			}

@@ -18,6 +18,10 @@ export class FormGenerator implements OnInit {
   payLoad: any;
   constructor(private jsonService: JsonService) {};
 	onSubmit(): void {
+		for(let i in this.form.value) {
+			this.form.value[i] = this.form.value[i].split("\n");
+		}
+		
 		this.payLoad = JSON.stringify(this.form.value);
 	}
 
