@@ -12,7 +12,7 @@ imports: [...,
 # FormGenerator
 
 Use the following HTML to generate a form automatically from a JSON file:
-<form-generator [file]="'form-content.json'"></form-generator>
+`<form-generator [file]="'form-content.json'"></form-generator>
 
 # Demo
 You can demo this on your own computer by running `ng serve`
