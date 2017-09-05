@@ -1,23 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import {HttpClientModule} from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { FormGenerator } from './form.generator';
-import { TextareaGenerator } from './textarea.generator';
+import { FormGeneratorModule } from './form-generator/form.generator.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-	FormGenerator,
-	TextareaGenerator
+    AppComponent
   ],
   imports: [
     BrowserModule,
-	FormsModule,
-	ReactiveFormsModule,
-	HttpClientModule
+	FormGeneratorModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
