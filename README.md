@@ -1,13 +1,13 @@
 # FormGeneratorModule
 
-import { FormGeneratorModule } from './form-generator/form.generator.module';
+`import { FormGeneratorModule } from './form-generator/form.generator.module';
 ...
 @NgModule({
 imports: [...,
 	FormGeneratorModule.forRoot(),
 	...
 	]
-})
+})`
 
 # FormGenerator
 
